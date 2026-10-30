@@ -1,0 +1,201 @@
+// {
+//   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+//   "modules": [
+//     "title",
+//     "separator",
+//     "os",
+//     "host",
+//     "kernel",
+//     // "uptime",
+//     "packages",
+//     "shell",
+//     // "display",
+//     // "de",
+//     "wm",
+//     // "wmtheme",
+//     // "theme",
+//     // "icons",
+//     // "font",
+//     // "cursor",
+//     "terminal",
+//     // "terminalfont",
+//     "cpu",
+//     "gpu",
+//     "memory",
+//     // "swap",
+//     // "disk",
+//     "localip",
+//     // "battery",
+//     "poweradapter",
+//     "locale",
+//     "break",
+//     //"colors"
+//   ]
+// }
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+     "padding": {
+        "top": 3
+      }
+    // "color": {
+    //   "1": "white",
+    //   "2": "white",
+    //   "3": "white",
+    //   "4": "white",
+    //   "5": "white",
+    //   "6": "white",
+    //   "7": "white",
+    //   "8": "white"
+    // }
+  },
+
+  "display": {
+     "separator": " -> ",
+     "color": {
+        "separator": "1"
+      }
+  },
+
+  "modules": [
+
+     {
+         "type": "title",
+         "color": {
+            "user": "white",
+            "at": "white",
+            "host": "green"
+         }
+     },
+
+     "separator",
+
+      "break",
+     {
+        "type": "custom",
+        "format": "{#keys}{#1}{#white} System "
+     },
+     {
+        "type": "kernel",
+        "key": "├ Kernel   ",
+        "keyColor": "white"
+     },
+     {
+        "type": "os",
+        "key": "├ OS       ",
+        "keyColor": "white"
+     },
+     {
+        "type": "de",
+        "key": "├ DE     ",
+        "keyColor": "white"
+     },
+     {
+        "type": "wm",
+        "key": "├ WM       ",
+        "keyColor": "white"
+        // "format" : "{1} ({3})"
+     },
+     {
+        "type": "shell",
+        "key": "├ Shell    ",
+        "keyColor": "white"
+     },
+     {
+        "type": "terminal",
+        "key": "├ Terminal ",
+        "keyColor": "white"
+     },
+     {
+        "type": "packages",
+        "key": "├ Packages ",
+        "keyColor": "white"
+     },
+     {
+        "type": "processes",
+        "key": "├ Processes",
+        "keyColor": "white"
+     },
+     {
+        "type": "uptime",
+        "key": "└ Uptime   ",
+        "keyColor": "white"
+     },
+      "break",
+     {
+        "type": "custom",
+        "format": "{#keys}{#1}{#white} Hardware "
+     },
+     // {
+     //    "type": "host",
+     //    "key": "├ Model  ",
+     //    "keyColor": "white",
+     //    "format": "{5} {2} {3}"
+     // },
+     {
+        "type": "cpu",
+        "key": "├ CPU    ",
+        "keyColor": "white",
+        "format": "{1} - {5} core @ {7} - {8}",
+        "temp": true
+     },
+     {
+        "type": "gpu",
+        "key": "├ GPU    ",
+        "keyColor": "white",
+        "format": "{2} - {5} core @ {12} - {4} - {11}",
+        "temp": true
+     },
+     {
+        "type": "memory",
+        "key": "├ RAM    ",
+        "keyColor": "white"
+     },
+     {
+        "type": "disk",
+        "key": "└ Storage",
+        "keyColor": "white",
+        "format": "{1} / {2} ({3}) - {9}"
+      },
+      "break",
+     {
+        "type": "custom",
+        "format": "{#keys}{#1}{#white}󱘖 Connectivity "
+     },
+     {
+        "type": "localip",
+        "key": "├ Local IP",
+        "keyColor": "white",
+        "format": "{1}",
+        "showMac": true
+     },
+     // {
+     //    "type": "dns",
+     //    "key": "├ DNS   ",
+     //    "keyColor": "white",
+     //    "format" : "{1}"
+     // },
+     {
+        "type": "wifi",
+        "key": "└ Wi-Fi   ",
+        "keyColor": "white",
+        "format": "{4} - {7} - {6} - {10}"
+     },
+     // {
+     //    "type": "38,2;255;165;0tooth",
+     //    "key": "├ BT Dev",
+     //    "keyColor": "white",
+     //    "format": "{1} - {4}"
+     // },
+     // {
+     //    "type": "whitetoothradio",
+     //    "key": "└ BT Ver",
+     //    "keyColor": "white",
+     //    "format": "{5}"
+     // },
+      "break",
+      "colors",
+      "break"
+  ]
+}
